@@ -4,11 +4,13 @@ import './App.css';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
+import User from './pages/User';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
 
 import { UserStorage } from './contexts/UserContext';
+import ProtectedRoute from './helper/ProtectedRoute';
 
 const App = () => {
   return (
@@ -18,7 +20,15 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
+            <Route path="login/*" element={<Login />} />
+            <Route
+              path="conta/*"
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
           <Footer />
         </UserStorage>
