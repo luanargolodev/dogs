@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Input from '../../../components/Input';
 import Button from '../../../components/Button';
-import Error from '../../../components/helper/Error';
+import Error from '../../../helper/Error';
 import useForm from '../../../hooks/useForm';
 
 import { UserContext } from '../../../contexts/UserContext';
@@ -36,13 +36,13 @@ const LoginForm = () => {
         )}
         <Error error={error} />
       </form>
-      <Link className={styles.lost} to="/login/lost">
+      <Link className={styles.lost} to="/login/perdeu-senha">
         Esqueci minha senha
       </Link>
       <div className={styles.create}>
         <h2 className={styles.subTitle}>Cadastre-se</h2>
         <p>Ainda não possui uma conta? Cadastra-se no site.</p>
-        <Link className={stylesBtn.button} to="/login/create">
+        <Link className={stylesBtn.button} to="/login/criar">
           Cadastro
         </Link>
       </div>
