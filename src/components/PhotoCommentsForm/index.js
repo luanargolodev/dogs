@@ -20,15 +20,16 @@ const PhotoCommentsForm = ({ id, setComments }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <textarea
+        className={styles.textarea}
         id={comment}
         name={comment}
         value={comment}
         placeholder="Comente..."
         onChange={(e) => setComment(e.target.value)}
       />
-      <button>
+      <button className={styles.button}>
         <Enviar />
       </button>
       <Error error={error} />
