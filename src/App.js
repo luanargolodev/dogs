@@ -12,6 +12,7 @@ import Header from './components/Header';
 import { UserStorage } from './contexts/UserContext';
 import ProtectedRoute from './helper/ProtectedRoute';
 import Photo from './components/Photo';
+import UserProfile from './components/UserProfile';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
               }
             />
             <Route path="foto/:id" element={<Photo />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
           </Routes>
           <Footer />
         </UserStorage>

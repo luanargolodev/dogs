@@ -21,7 +21,7 @@ const PhotoContent = ({ data, single }) => {
             {user.data && user.data.username === photo.author ? (
               <PhotoDelete id={photo.id} />
             ) : (
-              <Link to={`/perfil/${photo.autor}`}>@{photo.author}</Link>
+              <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             )}
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
