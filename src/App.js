@@ -11,6 +11,7 @@ import Header from './components/Header';
 
 import { UserStorage } from './contexts/UserContext';
 import ProtectedRoute from './helper/ProtectedRoute';
+import Photo from './components/Photo';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
+            <Route path="foto/:id" element={<Photo />} />
           </Routes>
           <Footer />
         </UserStorage>
