@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
 
 const Loading = () => {
-  const [step, setStep] = React.useState(0);
+  const [step, setStep] = useState(0);
 
   React.useEffect(() => {
     function updateStep() {
