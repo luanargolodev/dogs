@@ -5,6 +5,7 @@ import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import User from './pages/User';
+import NotFound from './pages/NotFound';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -33,6 +34,7 @@ const App = () => {
             />
             <Route path="foto/:id" element={<Photo />} />
             <Route path="perfil/:user" element={<UserProfile />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </UserStorage>
