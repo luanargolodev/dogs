@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Error from '../../helper/Error';
+import Head from '../../helper/Head';
 import Loading from '../../helper/Loading';
 import useFetch from '../../hooks/useFetch';
 import { PHOTO_GET } from '../../services/api';
@@ -20,6 +21,7 @@ const Photo = () => {
   if (data) {
     return (
       <section className="container mainContainer">
+        <Head title={data.photo.title} />
         <PhotoContent data={data} single={true} />
       </section>
     );
